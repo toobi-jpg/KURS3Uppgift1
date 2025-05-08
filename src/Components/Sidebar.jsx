@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navlink from "./Navlink";
+import { NavlinkwIcon } from "./Navlink";
 
 export default function Sidebar() {
   const [isSidebarOpen] = useState(false);
@@ -16,18 +16,20 @@ export default function Sidebar() {
             isSidebarOpen || isHovered ? "translateX(0)" : "translateX(-190px)",
         }}
       >
-        <div className="d-flex flex-column fs-6" style={{ gap: "20px" }}>
+        <div className="d-flex flex-column fs-6">
           <h3 style={{ fontWeight: "400" }}>Projects</h3>
           <hr
-            className="m-0 align-self-center"
+            className="m-0 align-self-center mt-3"
             style={{
               width: "85%",
               opacity: "10%",
               display: isSidebarOpen || isHovered ? "flex" : "none",
             }}
           />
-          <Navlink link="Uppgift 2" />
-          <Navlink link="Uppgift 3" />
+          <div className="links-container mt-3">
+            <NavlinkwIcon link="Uppgift 2" icon="bx bx-book" />
+            <NavlinkwIcon link="Uppgift 3" icon="bx bx-book" />
+          </div>
         </div>
         <i
           className="bx bx-sidebar sidebar-icon position-absolute fs-3"
