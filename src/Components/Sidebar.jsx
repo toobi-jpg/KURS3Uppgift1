@@ -2,30 +2,37 @@ import { useState } from "react";
 import Navlink from "./Navlink";
 
 export default function Sidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  function toggleSidebar() {
-    setIsSidebarOpen(!isSidebarOpen);
-    console.log("Sidebar toggled.");
-  }
+  const [isSidebarOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <aside className="bg-transparent d-flex position-fixed start-0 top-0 min-vh-100 align-items-center">
       <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         className="sidebar d-flex flex-column pt-3 rounded"
         style={{
-          transform: isSidebarOpen ? "translateX(0)" : "translateX(-240px)",
+          transform:
+            isSidebarOpen || isHovered ? "translateX(0)" : "translateX(-190px)",
         }}
       >
         <div className="d-flex flex-column fs-6" style={{ gap: "20px" }}>
           <h3 style={{ fontWeight: "400" }}>Projects</h3>
+          <hr
+            className="m-0 align-self-center"
+            style={{
+              width: "85%",
+              opacity: "10%",
+              display: isSidebarOpen || isHovered ? "flex" : "none",
+            }}
+          />
           <Navlink link="Uppgift 2" />
           <Navlink link="Uppgift 3" />
         </div>
-        <div
-          onClick={toggleSidebar}
-          className="toggle-side align-self-end rounded-end"
-        ></div>
+        <i
+          className="bx bx-sidebar sidebar-icon position-absolute fs-3"
+          style={{ display: isSidebarOpen || isHovered ? "none" : "flex" }}
+        ></i>
       </div>
     </aside>
   );
