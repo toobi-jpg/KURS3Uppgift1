@@ -1,19 +1,12 @@
+import Navlink from "./Navlink";
+
 export default function Navbar() {
   return (
-    <nav
-      style={{ maxWidth: "300px" }}
-      className="container navbar fixed-top mt-2 fs-5"
-    >
-      <div className="container-fluid">
-        <a className="nav-link" href="#">
-          Home
-        </a>
-        <a className="nav-link" href="#">
-          About
-        </a>
-        <a className="nav-link" href="#">
-          Contact Us
-        </a>
+    <nav className="navbar fixed-top mt-3 fs-6 w-100 w-md-50 w-lg-25 px-5">
+      <div className="menu container-fluid py-2 px-3 rounded">
+        <Navlink link="Home" />
+        <Navlink link="About" />
+        <Navlink link="Contact Us" />
       </div>
     </nav>
   );
