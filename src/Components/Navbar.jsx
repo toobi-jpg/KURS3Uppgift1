@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="menu container-fluid py-2 px-3 rounded">
         <Navlink link="Home" />
         <Navlink link="About" />
-        <Navlink link="Contact Us" />
+        <Navlink link="Contact" />
       </div>
     </nav>
   );

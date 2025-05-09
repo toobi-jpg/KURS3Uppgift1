@@ -17,12 +17,10 @@ export default function Sidebar() {
         }}
       >
         <div className="d-flex flex-column fs-6">
-          <h3 style={{ fontWeight: "400" }}>Projects</h3>
+          <h3 className="fw-normal">Projects</h3>
           <hr
-            className="m-0 align-self-center mt-3"
+            className="divider m-0 align-self-center mt-3"
             style={{
-              width: "85%",
-              opacity: "10%",
               display: isSidebarOpen || isHovered ? "flex" : "none",
             }}
           />

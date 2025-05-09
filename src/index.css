@@ -121,3 +121,8 @@ button:focus-visible {
   transition: 0.2s ease-in;
   background-color: var(--linkHoverBg);
 }
+
+.divider {
+  opacity: 10%;
+  width: 85%;
+}
