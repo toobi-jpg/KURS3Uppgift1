@@ -86,16 +86,16 @@ button:focus-visible {
   border: 1px solid rgba(255, 255, 255, 0.051);
   background-color: var(--divbg);
   max-width: 260px;
-  z-index: 998;
+  z-index: 1;
 }
 
 .sidebar {
+  position: relative;
   min-width: 240px;
   height: 95vh;
   border: 1px solid rgba(255, 255, 255, 0.051);
   background-color: var(--divbg);
   transition: 0.2s ease-in;
-  z-index: 999;
 }
 
 .links-container {

@@ -6,7 +6,10 @@ export default function Sidebar() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <aside className="bg-transparent d-flex position-fixed start-0 top-0 min-vh-100 align-items-center">
+    <aside
+      className="bg-transparent d-flex position-fixed start-0 top-0 min-vh-100 align-items-center"
+      style={{ zIndex: "9999" }}
+    >
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
